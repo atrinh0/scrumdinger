@@ -1,2 +1,3 @@
 # scrumdinger
- SwiftUI Tutorial
+
+> Going through https://developer.apple.com/tutorials/app-dev-training/getting-started
