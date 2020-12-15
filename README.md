@@ -1,3 +1,3 @@
 # scrumdinger
 
-> Going through https://developer.apple.com/tutorials/app-dev-training/getting-started
+> Going through https://developer.apple.com/tutorials/app-dev-training
