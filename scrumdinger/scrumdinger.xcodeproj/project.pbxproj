@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC135041258FADFB000D8DFD /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC135040258FADFB000D8DFD /* ScrumsView.swift */; };
+		FC46A024259028E80029CCEC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46A023259028E80029CCEC /* DetailView.swift */; };
 		FC66DEB925892B7C009DAC1A /* scrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DEB825892B7C009DAC1A /* scrumdingerApp.swift */; };
 		FC66DEBB25892B7C009DAC1A /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DEBA25892B7C009DAC1A /* MeetingView.swift */; };
 		FC66DEBD25892B7D009DAC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC66DEBC25892B7D009DAC1A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		FC135040258FADFB000D8DFD /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
+		FC46A023259028E80029CCEC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FC66DEB525892B7C009DAC1A /* scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC66DEB825892B7C009DAC1A /* scrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrumdingerApp.swift; sourceTree = "<group>"; };
 		FC66DEBA25892B7C009DAC1A /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
@@ -90,8 +92,9 @@
 		FC66DF26258A8BC8009DAC1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FC66DEBA25892B7C009DAC1A /* MeetingView.swift */,
 				FC66DF27258A8BDC009DAC1A /* CardView.swift */,
+				FC46A023259028E80029CCEC /* DetailView.swift */,
+				FC66DEBA25892B7C009DAC1A /* MeetingView.swift */,
 				FC135040258FADFB000D8DFD /* ScrumsView.swift */,
 			);
 			path = Views;
@@ -177,6 +180,7 @@
 				FC66DEBB25892B7C009DAC1A /* MeetingView.swift in Sources */,
 				FC135041258FADFB000D8DFD /* ScrumsView.swift in Sources */,
 				FC66DF23258A8B3E009DAC1A /* DailyScrum.swift in Sources */,
+				FC46A024259028E80029CCEC /* DetailView.swift in Sources */,
 				FC66DF28258A8BDC009DAC1A /* CardView.swift in Sources */,
 				FC66DF2E258A8E10009DAC1A /* Color+Codable.swift in Sources */,
 				FC66DEB925892B7C009DAC1A /* scrumdingerApp.swift in Sources */,
