@@ -16,6 +16,7 @@
 		FC66DF23258A8B3E009DAC1A /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DF22258A8B3E009DAC1A /* DailyScrum.swift */; };
 		FC66DF28258A8BDC009DAC1A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DF27258A8BDC009DAC1A /* CardView.swift */; };
 		FC66DF2E258A8E10009DAC1A /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DF2D258A8E10009DAC1A /* Color+Codable.swift */; };
+		FCBB55672594B45C0049B24E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB55662594B45C0049B24E /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC66DF22258A8B3E009DAC1A /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		FC66DF27258A8BDC009DAC1A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FC66DF2D258A8E10009DAC1A /* Color+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
+		FCBB55662594B45C0049B24E /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				FC66DF27258A8BDC009DAC1A /* CardView.swift */,
 				FC46A023259028E80029CCEC /* DetailView.swift */,
+				FCBB55662594B45C0049B24E /* EditView.swift */,
 				FC66DEBA25892B7C009DAC1A /* MeetingView.swift */,
 				FC135040258FADFB000D8DFD /* ScrumsView.swift */,
 			);
@@ -179,6 +182,7 @@
 			files = (
 				FC66DEBB25892B7C009DAC1A /* MeetingView.swift in Sources */,
 				FC135041258FADFB000D8DFD /* ScrumsView.swift in Sources */,
+				FCBB55672594B45C0049B24E /* EditView.swift in Sources */,
 				FC66DF23258A8B3E009DAC1A /* DailyScrum.swift in Sources */,
 				FC46A024259028E80029CCEC /* DetailView.swift in Sources */,
 				FC66DF28258A8BDC009DAC1A /* CardView.swift in Sources */,
