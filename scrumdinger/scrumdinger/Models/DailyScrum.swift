@@ -61,3 +61,9 @@ extension DailyScrum {
         color = data.color
     }
 }
+
+extension DailyScrum {
+    var timer: ScrumTimer {
+        ScrumTimer(lengthInMinutes: lengthInMinutes, attendees: attendees)
+    }
+}
