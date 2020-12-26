@@ -14,6 +14,8 @@
 		FC17C786259772A0004AF287 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17C785259772A0004AF287 /* History.swift */; };
 		FC17C78925977C4F004AF287 /* ScrumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17C78825977C4F004AF287 /* ScrumData.swift */; };
 		FC17C78C259782C2004AF287 /* MeetingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17C78B259782C2004AF287 /* MeetingTimerView.swift */; };
+		FC17C79025979283004AF287 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17C78F25979283004AF287 /* SpeechRecognizer.swift */; };
+		FC17C794259794A8004AF287 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17C793259794A8004AF287 /* HistoryView.swift */; };
 		FC46A024259028E80029CCEC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46A023259028E80029CCEC /* DetailView.swift */; };
 		FC66DEB925892B7C009DAC1A /* scrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DEB825892B7C009DAC1A /* scrumdingerApp.swift */; };
 		FC66DEBB25892B7C009DAC1A /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DEBA25892B7C009DAC1A /* MeetingView.swift */; };
@@ -36,6 +38,8 @@
 		FC17C785259772A0004AF287 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		FC17C78825977C4F004AF287 /* ScrumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumData.swift; sourceTree = "<group>"; };
 		FC17C78B259782C2004AF287 /* MeetingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTimerView.swift; sourceTree = "<group>"; };
+		FC17C78F25979283004AF287 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		FC17C793259794A8004AF287 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		FC46A023259028E80029CCEC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FC66DEB525892B7C009DAC1A /* scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC66DEB825892B7C009DAC1A /* scrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrumdingerApp.swift; sourceTree = "<group>"; };
@@ -113,10 +117,11 @@
 		FC66DF21258A8B2B009DAC1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC17C785259772A0004AF287 /* History.swift */,
-				FCBB55712594FEE00049B24E /* ScrumTimer.swift */,
 				FC66DF22258A8B3E009DAC1A /* DailyScrum.swift */,
+				FC17C785259772A0004AF287 /* History.swift */,
 				FC17C78825977C4F004AF287 /* ScrumData.swift */,
+				FCBB55712594FEE00049B24E /* ScrumTimer.swift */,
+				FC17C78F25979283004AF287 /* SpeechRecognizer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				FC66DF27258A8BDC009DAC1A /* CardView.swift */,
 				FC46A023259028E80029CCEC /* DetailView.swift */,
 				FCBB55662594B45C0049B24E /* EditView.swift */,
+				FC17C793259794A8004AF287 /* HistoryView.swift */,
 				FC17C771259500AA004AF287 /* MeetingFooterView.swift */,
 				FCBB556A2594F28D0049B24E /* MeetingHeaderView.swift */,
 				FC17C78B259782C2004AF287 /* MeetingTimerView.swift */,
@@ -227,9 +233,11 @@
 				FC66DEBB25892B7C009DAC1A /* MeetingView.swift in Sources */,
 				FC135041258FADFB000D8DFD /* ScrumsView.swift in Sources */,
 				FC17C786259772A0004AF287 /* History.swift in Sources */,
+				FC17C79025979283004AF287 /* SpeechRecognizer.swift in Sources */,
 				FCBB55672594B45C0049B24E /* EditView.swift in Sources */,
 				FC17C77F25950529004AF287 /* AVPlayer+Ding.swift in Sources */,
 				FC17C78925977C4F004AF287 /* ScrumData.swift in Sources */,
+				FC17C794259794A8004AF287 /* HistoryView.swift in Sources */,
 				FC17C78C259782C2004AF287 /* MeetingTimerView.swift in Sources */,
 				FCBB556B2594F28D0049B24E /* MeetingHeaderView.swift in Sources */,
 				FC66DF23258A8B3E009DAC1A /* DailyScrum.swift in Sources */,
