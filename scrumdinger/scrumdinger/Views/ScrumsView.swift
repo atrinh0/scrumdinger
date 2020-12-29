@@ -52,6 +52,7 @@ struct ScrumsView: View {
                         let newScrum = DailyScrum(title: newScrumData.title, attendees: newScrumData.attendees, lengthInMinutes: Int(newScrumData.lengthInMinutes), color: newScrumData.color)
                         scrums.append(newScrum)
                         isPresented = false
+                        newScrumData = DailyScrum.Data()
                     })
             }
         }
