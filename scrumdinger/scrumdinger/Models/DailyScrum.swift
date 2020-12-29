@@ -69,3 +69,9 @@ extension DailyScrum {
         ScrumTimer(lengthInMinutes: lengthInMinutes, attendees: attendees)
     }
 }
+
+extension DailyScrum {
+    var iconName: String {
+        attendees.count <= 1 ? "person.fill" : "person.\(min(attendees.count, 3)).fill"
+    }
+}

@@ -9,21 +9,24 @@ import SwiftUI
 
 struct MeetingFooterView: View {
     @Binding var speakers: [ScrumTimer.Speaker]
+    
     var skipAction: () -> Void
+    let endAction: () -> Void
     
     var body: some View {
         VStack {
             HStack {
-                if isLastSpeaker {
-                    Text("Last Speaker")
-                } else {
-                    Text(speakerText)
-                    Spacer()
-                    Button(action: skipAction) {
-                        Image(systemName: "forward.fill")
-                    }
-                    .accessibilityLabel(Text("Next speaker"))
+                Text(speakerText)
+                Spacer()
+                Button(action: isLastSpeaker ? endAction : skipAction) {
+                    Image(systemName: isLastSpeaker ? "stop.fill" : "forward.fill")
+                        .font(Font.body.weight(.heavy))
+                        .padding(8)
+                        .background(RoundedRectangle(cornerRadius: 9)
+                                        .foregroundColor(.accentColor)
+                                        .opacity(0.2))
                 }
+                .accessibilityLabel(Text(isLastSpeaker ? "End meeting" : "Next speaker"))
             }
         }
         .padding([.bottom, .horizontal])
@@ -48,7 +51,7 @@ struct MeetingFooterView_Previews: PreviewProvider {
     static var speakers = [ScrumTimer.Speaker(name: "Kim", isCompleted: false), ScrumTimer.Speaker(name: "Bill", isCompleted: false)]
     
     static var previews: some View {
-        MeetingFooterView(speakers: .constant(speakers), skipAction: { })
+        MeetingFooterView(speakers: .constant(speakers), skipAction: { }, endAction: { })
             .previewLayout(.sizeThatFits)
     }
 }

@@ -13,36 +13,33 @@ struct DetailView: View {
     @State private var data: DailyScrum.Data = DailyScrum.Data()
     @State private var isPresented = false
     
+    @State private var isScrumming = false
+    
     var body: some View {
         List {
-            Section(header: Text("Meeting Info")) {
-                NavigationLink(destination: MeetingView(scrum: $scrum)) {
-                    Label("Start Meeting", systemImage: "timer")
-                        .font(.headline)
-                        .foregroundColor(.accentColor)
-                        .accessibilityLabel(Text("Start meeting"))
-                }
+            Section {
+                CardView(scrum: scrum)
                 HStack {
-                    Label("Length", systemImage: "clock")
-                        .accessibilityLabel(Text("Meeting length"))
                     Spacer()
-                    Text("\(scrum.lengthInMinutes) minutes")
-                }
-                HStack {
-                    Label("Color", systemImage: "paintpalette")
+                    Button(action: {
+                        isScrumming = true
+                    }) {
+                        Text("Start Meeting")
+                            .font(Font.title3.bold())
+                            .foregroundColor(.accentColor)
+                            .padding()
+                    }
                     Spacer()
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(scrum.color)
                 }
-                .accessibilityElement(children: .ignore)
             }
-            Section(header: Text("Attendees")) {
+            Section {
                 ForEach(scrum.attendees, id:\.self) { attendee in
                     Label(attendee, systemImage: "person")
                         .accessibilityLabel(Text("Person"))
                         .accessibilityValue(Text(attendee))
                 }
             }
+            .accentColor(.gray)
             Section(header: Text("History")) {
                 if scrum.history.isEmpty {
                     Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
@@ -56,25 +53,40 @@ struct DetailView: View {
                     }
                 }
             }
+            .accentColor(.gray)
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationBarItems(trailing: Button("Edit") {
+        .navigationBarItems(trailing: Button(action: {
             isPresented = true
             data = scrum.data
+        }) {
+            Image(systemName: "gearshape.fill")
+                .font(Font.body.weight(.semibold))
+                .padding(7)
+                .background(RoundedRectangle(cornerRadius: 9)
+                                .foregroundColor(.accentColor)
+                                .opacity(0.2))
         })
         .navigationTitle(scrum.title)
-        .fullScreenCover(isPresented: $isPresented) {
+        .sheet(isPresented: $isPresented) {
             NavigationView {
                 EditView(scrumData: $data)
-                    .navigationTitle(scrum.title)
+                    .navigationTitle("Edit Scrum")
+                    .navigationBarTitleDisplayMode(.inline)
                     .navigationBarItems(leading: Button("Cancel") {
                         isPresented = false
-                    }, trailing: Button("Done") {
+                    }, trailing: Button("Save") {
                         isPresented = false
                         scrum.update(from: data)
                     })
             }
         }
+        .background(EmptyView()
+                        .fullScreenCover(isPresented: $isScrumming) {
+                            MeetingView(scrum: $scrum) {
+                                isScrumming = false
+                            }
+                        })
     }
 }
 

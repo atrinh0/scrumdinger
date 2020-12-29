@@ -18,22 +18,35 @@ struct ScrumsView: View {
     var body: some View {
         List {
             ForEach(scrums) { scrum in
-                NavigationLink(destination: DetailView(scrum: binding(for: scrum))) {
-                    CardView(scrum: scrum)
+                Section {
+                    NavigationLink(destination: DetailView(scrum: binding(for: scrum))) {
+                        CardView(scrum: scrum)
+                    }
                 }
-                .listRowBackground(scrum.color)
+            }
+            .onDelete { indicies in
+                scrums.remove(atOffsets: indicies)
             }
         }
-        .navigationTitle("Daily Scrums")
+        .listStyle(InsetGroupedListStyle())
+        .navigationTitle("Scrumdinger")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button(action: {
             isPresented = true
         }) {
             Image(systemName: "plus")
+                .font(Font.body.weight(.heavy))
+                .padding(8)
+                .background(RoundedRectangle(cornerRadius: 9)
+                                .foregroundColor(.accentColor)
+                                .opacity(0.2))
         })
         .sheet(isPresented: $isPresented) {
             NavigationView {
                 EditView(scrumData: $newScrumData)
-                    .navigationBarItems(leading: Button("Dismiss") {
+                    .navigationTitle("New Scrum")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarItems(leading: Button("Cancel") {
                         isPresented = false
                     }, trailing: Button("Add") {
                         let newScrum = DailyScrum(title: newScrumData.title, attendees: newScrumData.attendees, lengthInMinutes: Int(newScrumData.lengthInMinutes), color: newScrumData.color)

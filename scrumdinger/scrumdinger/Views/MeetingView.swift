@@ -14,21 +14,26 @@ struct MeetingView: View {
     @State private var transcript = ""
     @State private var isRecording = false
     
+    let endAction: () -> Void
+    
     private let speechRecognizer = SpeechRecognizer()
     var player: AVPlayer { AVPlayer.sharedDingPlayer }
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(scrum.color)
             VStack {
+                Spacer()
                 MeetingHeaderView(secondsElapsed: $scrumTimer.secondsElapsed, secondsRemaining: $scrumTimer.secondsRemaining, scrumColor: scrum.color)
+                Spacer()
                 MeetingTimerView(speakers: $scrumTimer.speakers, isRecording: $isRecording, scrumColor: scrum.color)
-                MeetingFooterView(speakers: $scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
+                MeetingFooterView(speakers: $scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker, endAction: endAction)
+                Spacer()
             }
+            .padding()
         }
-        .padding()
-        .foregroundColor(scrum.color.accessibleFontColor)
+        .edgesIgnoringSafeArea(.all)
         .onAppear {
             scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes, attendees: scrum.attendees)
             scrumTimer.speakerChangedAction = {
@@ -51,6 +56,6 @@ struct MeetingView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingView(scrum: .constant(DailyScrum.data[0]))
+        MeetingView(scrum: .constant(DailyScrum.data[0]), endAction: { })
     }
 }

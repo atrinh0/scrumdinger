@@ -17,6 +17,7 @@ struct MeetingTimerView: View {
         ZStack {
             Circle()
                 .strokeBorder(lineWidth: 24, antialiased: true)
+                .foregroundColor(scrumColor.opacity(0.25))
             VStack {
                 Text(currentSpeaker)
                     .font(.title)
@@ -27,7 +28,6 @@ struct MeetingTimerView: View {
                     .accessibilityLabel(isRecording ? "with transcription" : "without transcription")
             }
             .accessibilityElement(children: .combine)
-            .foregroundColor(scrumColor.accessibleFontColor)
             ForEach(speakers) { speaker in
                 if speaker.isCompleted,
                    let index = speakers.firstIndex(where: { $0.id == speaker.id }) {

@@ -75,6 +75,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FC31063B259B903B005CFE68 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FC66DF27258A8BDC009DAC1A /* CardView.swift */,
+				FC17C771259500AA004AF287 /* MeetingFooterView.swift */,
+				FCBB556A2594F28D0049B24E /* MeetingHeaderView.swift */,
+				FC17C78B259782C2004AF287 /* MeetingTimerView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		FC66DEAC25892B7C009DAC1A = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				FCBB556D2594F93B0049B24E /* Styles */,
-				FC66DF27258A8BDC009DAC1A /* CardView.swift */,
+				FC31063B259B903B005CFE68 /* Subviews */,
 				FC46A023259028E80029CCEC /* DetailView.swift */,
 				FCBB55662594B45C0049B24E /* EditView.swift */,
 				FC17C793259794A8004AF287 /* HistoryView.swift */,
-				FC17C771259500AA004AF287 /* MeetingFooterView.swift */,
-				FCBB556A2594F28D0049B24E /* MeetingHeaderView.swift */,
-				FC17C78B259782C2004AF287 /* MeetingTimerView.swift */,
 				FC66DEBA25892B7C009DAC1A /* MeetingView.swift */,
 				FC135040258FADFB000D8DFD /* ScrumsView.swift */,
 			);
