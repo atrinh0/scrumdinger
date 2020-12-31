@@ -13,9 +13,9 @@ Code walkthrough of [https://developer.apple.com/tutorials/app-dev-training](htt
 
 ## Further enhancements
 
-<img src="images/list.png" width="375"/>
-
 ### List View
+
+<img src="images/list.png" width="375"/>
 
 - Icons and caption text update based on number of attendees
 - Made the screen more appealing
