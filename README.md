@@ -11,13 +11,17 @@ Code walkthrough of [https://developer.apple.com/tutorials/app-dev-training](htt
 
 <img src="images/demo.gif"/>
 
-### Further enhancements
+## Further enhancements
 
 <img src="images/list.png" width="375"/>
+
+### List View
 
 - Icons and caption text update based on number of attendees
 - Made the screen more appealing
 - Updated title to the name of the app
+
+### Details View
 
 <img src="images/details.png" width="375"/>
 
@@ -25,16 +29,22 @@ Code walkthrough of [https://developer.apple.com/tutorials/app-dev-training](htt
 - Center align and enlarge main action
 - Remove color from labels that are not interactable
 
+### New Scrum View
+
 <img src="images/new.png" width="375"/>
 
 - Added `New Scrum` title
 - Rename `Dismiss` to `Cancel`
+
+### Edit Scrum View
 
 <img src="images/edit.png" width="375"/>
 
 - Changed title to `Edit Scrum` instead of using the title (inaccurate when changed)
 - Rename `Done` to `Save`
 - Presented as a sheet rather than full screen for consistency with New
+
+### Meeting View
 
 <img src="images/meeting.png" width="375"/>
 
