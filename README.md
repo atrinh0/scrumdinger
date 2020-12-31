@@ -9,6 +9,8 @@
 
 Code walkthrough of [https://developer.apple.com/tutorials/app-dev-training](https://developer.apple.com/tutorials/app-dev-training).
 
+<img src="images/demo.gif"/>
+
 ### Further enhancements
 
 | Image | Comments |
