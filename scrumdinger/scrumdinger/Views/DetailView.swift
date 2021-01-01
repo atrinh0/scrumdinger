@@ -64,8 +64,7 @@ struct DetailView: View {
                 .font(Font.body.weight(.semibold))
                 .padding(7)
                 .background(RoundedRectangle(cornerRadius: 9)
-                                .foregroundColor(.accentColor)
-                                .opacity(0.2))
+                                .foregroundColor(Color.accentColor.lighterColor))
         })
         .navigationTitle(scrum.title)
         .sheet(isPresented: $isPresented) {

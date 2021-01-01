@@ -23,8 +23,7 @@ struct MeetingFooterView: View {
                         .font(Font.body.weight(.heavy))
                         .padding(8)
                         .background(RoundedRectangle(cornerRadius: 9)
-                                        .foregroundColor(.accentColor)
-                                        .opacity(0.2))
+                                        .foregroundColor(Color.accentColor.lighterColor))
                 }
                 .accessibilityLabel(Text(isLastSpeaker ? "End meeting" : "Next speaker"))
             }

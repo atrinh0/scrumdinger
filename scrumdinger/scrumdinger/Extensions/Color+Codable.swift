@@ -69,7 +69,7 @@ extension Color: Codable {
         UIColor(self).getRed(&red, green: &green, blue: &blue, alpha: nil)
         return isLightColor(red: red, green: green, blue: blue) ? .black : .white
     }
-    
+
     private func isLightColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> Bool {
         let lightRed = red > 0.65
         let lightGreen = green > 0.65
@@ -77,5 +77,22 @@ extension Color: Codable {
         
         let lightness = [lightRed, lightGreen, lightBlue].reduce(0) { $1 ? $0 + 1 : $0 }
         return lightness >= 2
+    }
+    
+    // MARK: - Lighter color
+    
+    var lighterColor: Color {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        
+        UIColor(self).getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        // lighten
+        red = min((red*255 + 255*3)/(255*4), 1)
+        green = min((green*255 + 255*3)/(255*4), 1)
+        blue = min((blue*255 + 255*3)/(255*4), 1)
+        
+        return Color(red: Double(red), green: Double(green), blue: Double(blue))
     }
 }

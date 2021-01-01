@@ -25,7 +25,7 @@ struct CardView: View {
                 .foregroundColor(scrum.color)
                 .padding(8)
                 .background(RoundedRectangle(cornerRadius: 9)
-                                .foregroundColor(scrum.color.opacity(0.25)))
+                                .foregroundColor(scrum.color.lighterColor))
         }
         .padding(.vertical)
     }

@@ -17,7 +17,7 @@ struct MeetingTimerView: View {
         ZStack {
             Circle()
                 .strokeBorder(lineWidth: 24, antialiased: true)
-                .foregroundColor(scrumColor.opacity(0.25))
+                .foregroundColor(scrumColor.lighterColor)
             VStack {
                 Text(currentSpeaker)
                     .font(.title)
